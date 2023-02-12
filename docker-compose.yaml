@@ -6,6 +6,7 @@ services:
     ports:
       - "${HOST_PORT}:8080"
     restart: unless-stopped
+    network_mode: bridge
     volumes:
       - ./resume.yaml:/go/src/app/resume.yaml # ENABLES LIVE-EDITING
       #- ./resume.html:/go/src/app/resume.html # ONLY FOR DEBUGGING
