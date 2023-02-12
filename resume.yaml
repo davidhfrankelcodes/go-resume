@@ -1,5 +1,5 @@
 contact_information:
-  name: John Doe
+  name: David Frankel
   email: john.doe@example.com
   address: 123 Main St, Anytown USA 12345
   phone: (123) 456-7890
@@ -24,6 +24,6 @@ work_experience:
 skills:
 - Go programming language
 - Python programming language
-- HTML, CSS, JavaScript
+- Static sites using Django and Flask
 - SQL
-- Git
+- AWS Lambda

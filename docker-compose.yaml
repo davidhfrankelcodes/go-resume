@@ -4,5 +4,8 @@ services:
     build: .
     container_name: go-resume
     ports:
-      - "8080:8080"
+      - "${HOST_PORT}:8080"
     restart: unless-stopped
+    volumes:
+      - ./resume.yaml:/go/src/app/resume.yaml # ENABLES LIVE-EDITING
+      #- ./resume.html:/go/src/app/resume.html # ONLY FOR DEBUGGING
