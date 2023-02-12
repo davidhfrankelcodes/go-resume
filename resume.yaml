@@ -1,0 +1,29 @@
+contact_information:
+  name: John Doe
+  email: john.doe@example.com
+  address: 123 Main St, Anytown USA 12345
+  phone: (123) 456-7890
+education:
+- school: University of Example
+  degree: Bachelor of Science
+  subject: Computer Science
+  graduated: May 2020
+- school: College of Example
+  degree: Associate of Science
+  subject: Computer Science
+  graduated: May 2018
+work_experience:
+- company: ACME Inc.
+  position: Software Engineer
+  duration: June 2020 - Present
+  description: Working on developing and maintaining software applications for the company.
+- company: XYZ Corp.
+  position: Junior Software Engineer
+  duration: May 2018 - May 2020
+  description: Assisted in the development and maintenance of software applications for the company.
+skills:
+- Go programming language
+- Python programming language
+- HTML, CSS, JavaScript
+- SQL
+- Git

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<title>Resume</title>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center mt-5">Resume</h1>
+		<hr>
+		<h2>Contact Information</h2>
+		<p>Name: {{.ContactInformation.Name}}</p>
+		<p>Email: {{.ContactInformation.Email}}</p>
+		<p>Address: {{.ContactInformation.Address}}</p>
+		<p>Phone: {{.ContactInformation.Phone}}</p>
+		<hr>
+		<h2>Education</h2>
+		{{range .Education}}
+			<h3>{{.School}}</h3>
+			<p>Degree: {{.Degree}}</p>
+			<p>Subject: {{.Subject}}</p>
+			<p>Graduated: {{.Graduated}}</p>
+			<hr>
+		{{end}}
+		<h2>Work Experience</h2>
+		{{range .WorkExperience}}
+			<h3>{{.Company}}</h3>
+			<p>Position: {{.Position}}</p>
+			<p>Duration: {{.Duration}}</p>
+			<p>Description: {{.Description}}</p>
+			<hr>
+		{{end}}
+		<h2>Skills</h2>
+		<ul>
+			{{range .Skills}}
+				<li>{{.}}</li>
+			{{end}}
+		</ul>
+	</div>
+</body>
+</html>
