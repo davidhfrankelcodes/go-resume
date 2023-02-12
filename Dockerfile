@@ -4,6 +4,9 @@ FROM golang:latest
 # Copy the main.go file into the container
 COPY main.go /go/src/app/main.go
 
+# Copy the static files into the container
+COPY static /go/src/app/static
+
 # Copy the resume.html file into the container
 COPY resume.html /go/src/app/resume.html
 
