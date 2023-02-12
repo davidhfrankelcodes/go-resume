@@ -17,7 +17,8 @@ COPY go.mod /go/src/app/go.mod
 WORKDIR /go/src/app
 
 # Download the dependencies specified in the go.mod file
-RUN go mod download
+# RUN go mod download
+RUN go mod download gopkg.in/yaml.v2
 
 # Build the Go app
 RUN go build main.go

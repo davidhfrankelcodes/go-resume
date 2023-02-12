@@ -63,7 +63,8 @@ func main() {
 			return
 		}
 	})
-
+	// Serve the static file server
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 	// Start the server
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
