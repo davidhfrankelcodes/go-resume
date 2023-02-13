@@ -29,7 +29,9 @@ type Resume struct {
 		Duration    string `yaml:"duration"`
 		Description string `yaml:"description"`
 	} `yaml:"work_experience"`
-	Skills []string `yaml:"skills"`
+	Skills     []string `yaml:"skills"`
+	GitHub     string   `yaml:"github"`
+	Occupation string   `yaml:"occupation"`
 }
 
 func main() {

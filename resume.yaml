@@ -1,8 +1,10 @@
 contact_information:
   name: David Frankel
-  email: john.doe@example.com
-  address: 123 Main St, Anytown USA 12345
-  phone: (123) 456-7890
+  email: davidhfrankelcodes@gmail.com
+  address: Chicago, IL
+  phone: (hidden)
+occupation: Software Engineer
+github: https://github.com/davidhfrankelcodes
 education:
 - school: University of Example
   degree: Bachelor of Science

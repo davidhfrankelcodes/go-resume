@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 	<title>Resume | {{.ContactInformation.Name}}</title>
 </head>
+
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="mailto:{{.ContactInformation.Email}}">{{.ContactInformation.Email}}</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{.GitHub}}">
+							<img src="/static/github-logo.png" alt="GitHub logo" width="30" height="30">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<div class="container">
 		<h1 class="text-center mt-5">{{.ContactInformation.Name}}</h1>
-		<h4 class="text-center mt-5">Resume</h4>
+		<h4 class="text-center mt-5">{{.Occupation}}</h4>
 		<hr>
 		<h2>Contact Information</h2>
 		<p>Name: {{.ContactInformation.Name}}</p>
 		<p>Email: {{.ContactInformation.Email}}</p>
-		<p>Address: {{.ContactInformation.Address}}</p>
+		<p>Location: {{.ContactInformation.Address}}</p>
 		<p>Phone: {{.ContactInformation.Phone}}</p>
 		<hr>
 		<h2>Education</h2>
 		{{range .Education}}
-			<h3>{{.School}}</h3>
-			<p>Degree: {{.Degree}}</p>
-			<p>Subject: {{.Subject}}</p>
-			<p>Graduated: {{.Graduated}}</p>
-			<hr>
+		<h3>{{.School}}</h3>
+		<p>Degree: {{.Degree}}</p>
+		<p>Subject: {{.Subject}}</p>
+		<p>Graduated: {{.Graduated}}</p>
+		<hr>
 		{{end}}
 		<h2>Work Experience</h2>
 		{{range .WorkExperience}}
-			<h3>{{.Company}}</h3>
-			<p>Position: {{.Position}}</p>
-			<p>Duration: {{.Duration}}</p>
-			<p>Description: {{.Description}}</p>
-			<hr>
+		<h3>{{.Company}}</h3>
+		<p>Position: {{.Position}}</p>
+		<p>Duration: {{.Duration}}</p>
+		<p>Description: {{.Description}}</p>
+		<hr>
 		{{end}}
 		<h2>Skills</h2>
 		<ul>
 			{{range .Skills}}
-				<li>{{.}}</li>
+			<li>{{.}}</li>
 			{{end}}
 		</ul>
 	</div>
 </body>
+
 </html>
